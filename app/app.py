@@ -119,7 +119,7 @@ def api_add() -> str:
     cursor = mysql.get_db().cursor()
     inputData = (content['first_name'], content['last_name'], content['company_name'],
                  content['address'], content['phone'])
-    sql_insert_query = """INSERT INTO details (first_name,last_name, company_name, address, phone) 
+    sql_insert_query = """INSERT INTO details (first_name, last_name, company_name, address, phone) 
                 VALUES (%s,%s,%s,%s,%s)"""
     cursor.execute(sql_insert_query, inputData)
     mysql.get_db().commit()
