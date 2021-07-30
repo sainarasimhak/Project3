@@ -2,7 +2,7 @@ version: "2"
 services:
   app:
     build: ./app
-    container_name: "People"
+    container_name: "Prj3"
     links:
       - db
     depends_on:
@@ -12,7 +12,7 @@ services:
 
   db:
     image: mysql:5.7
-    container_name: "People_DB"
+    container_name: "Prj3_DB"
     ports:
       - "32000:3306"
     environment:
